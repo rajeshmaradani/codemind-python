@@ -1,15 +1,13 @@
-def lcm(x,y):
-    if x>y:
-        greater=x
-    else:
-        greater=y
-    while(True):
-        if ((greater%x==0) and (greater%y==0)):
-            lcm=greater
-            break
-        greater+=1
-   
-    return lcm
-
-n,m=map(int,input().split())
-print(lcm(n,m))
+def lcm(a,b):
+    t=2
+    res=1
+    while a>=t and b>=t:
+        if a%t==0 and b%t==0:
+            a=a//t
+            b=b//t
+            res=res*t
+        else:
+            t+=1
+    return res*a*b
+a,b=map(int,input().split())
+print(lcm(a,b))
