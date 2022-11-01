@@ -3,7 +3,7 @@ a=0
 b=1
 c=0
 s=0
-while n>=c:
+for i in range(1,n+1):
     if c==n:
         s+=1
         break
@@ -14,5 +14,3 @@ if s==1:
     print("True")
 else:
     print("False")
-    
-    
