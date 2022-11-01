@@ -1,0 +1,6 @@
+n=int(input())
+lst=list(map(int,input().split()))
+m=sum(lst)
+p=m/len(lst)
+r="{:.2f}".format(p)
+print(r)
