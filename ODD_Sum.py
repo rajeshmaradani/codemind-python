@@ -1,0 +1,7 @@
+n=int(input())
+x=list(map(int,input().split()))
+e=[]
+for i in range(n):
+    if x[i]%2==1:
+        e.append(x[i])
+print(sum(e))        
