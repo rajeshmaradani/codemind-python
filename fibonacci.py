@@ -1,10 +1,10 @@
 n=int(input())
 a=0
 b=1
-sum=0
-for i in range(0,n):
+c=0
+for i in range(1,n+1):
     print(a,end=" ")
-    sum=a+b
+    c=a+b
     a=b
-    b=sum
+    b=c
     
