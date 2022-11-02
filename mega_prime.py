@@ -1,23 +1,26 @@
 def prime(n):
-    if n==1:
-        return 0
-    for i in range(2,int(n**0.5)+1):
+    c=0
+    for i in range(1,n+1):
         if n%i==0:
-            return 0
-    return 1
+            c+=1
+    if c==2:
+        return 1
+    else:
+        return 0
 n=int(input())
-d=0
+l=len(str(n))
+t=n
 c=0
 if prime(n)==1:
     while n:
         r=n%10
-        d+=1
         if prime(r)==1:
-            c+=1
-        n//=10
-    if d==c:
+            c=c+1
+        n=n//10
+    if c==l:
         print("Mega Prime")
     else:
         print("Not Mega Prime")
 else:
     print("Not Mega Prime")
+    
